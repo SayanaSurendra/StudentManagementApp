@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
 
-@Component
+//@Component
 public class ScannerInputService implements UserInputService{
 
 
     private final Scanner scanner;
 
-    @Autowired
+  //  @Autowired
     public ScannerInputService(Scanner scanner) {
         this.scanner = scanner;
     }
@@ -20,12 +20,14 @@ public class ScannerInputService implements UserInputService{
     @Override
     public String getString() {
         System.out.print("Enter a string: ");
-        return scanner.nextLine();
+        String  name=scanner.nextLine();
+        return name;
     }
 
     @Override
     public int getInt() {
         System.out.print("Enter an integer: ");
-         return scanner.nextInt();
+
+         return Integer.parseInt(scanner.nextLine());
     }
 }

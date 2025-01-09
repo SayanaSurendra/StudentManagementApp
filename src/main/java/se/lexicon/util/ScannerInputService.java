@@ -31,7 +31,7 @@ public class ScannerInputService implements UserInputService{
             try {
                 return Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("That's not a valid integer. Please try again.");
+                System.out.println("It is  not a valid integer. Please try again.");
             }
         }
 

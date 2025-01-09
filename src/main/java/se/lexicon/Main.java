@@ -1,10 +1,17 @@
 package se.lexicon;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import se.lexicon.config.ComponentScanConfig;
+import se.lexicon.data_access.StudentDao;
+import se.lexicon.data_access.StudentDaoListImpl;
+
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!!");
+
+        AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(ComponentScanConfig.class);
+        StudentDao studentDao=context.getBean(StudentDaoListImpl.class);
+
 
     }
 }

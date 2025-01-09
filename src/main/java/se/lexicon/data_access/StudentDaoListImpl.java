@@ -24,8 +24,7 @@ public class StudentDaoListImpl implements StudentDao{
 
     @Override
     public Student find(int id) {
-
-      return students.stream().filter(student -> student.getId()== id).findFirst().orElse(null);
+        return students.stream().filter(student -> student.getId()== id).findFirst().orElse(null);
     }
 
     @Override
